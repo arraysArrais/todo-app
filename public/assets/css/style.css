@@ -49,7 +49,14 @@ nav {
     padding: 20px 30px;
     border-radius: 10px;
     transition: all .3s ease-in-out;
+    border:0;
 
+}
+
+.buttons{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: left;
 }
 
 .btn:hover {
@@ -102,7 +109,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:12px;
+    font-size: 12px;
 }
 
 .graph_header-subtitle {
@@ -223,3 +230,39 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
+#create_task_section {
+    margin: auto;
+    padding-top: 20px;
+}
+
+#create_task_section>h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputArea {
+    display: block;
+    margin:10px;
+}
+
+.inputArea>label {
+    display: block;
+}
+
+.inputArea>input, .inputArea>select {
+    height: 40px;
+    width: 400px;
+    border-radius: 6px;
+    border:1px solid #333;
+    padding: 5px 10px;
+}
+
+.inputArea>textarea{
+    height:120px;
+    width: 400px;
+    border-radius: 6px;
+    border:1px solid #333;
+    padding: 5px 10px;
+}
+
