@@ -53,11 +53,11 @@ nav {
 
 }
 
-.buttons{
+/* .buttons{
     display:flex;
     flex-direction: row-reverse;
     justify-content: left;
-}
+} */
 
 .btn:hover {
     transform: scale(1.05);
@@ -231,30 +231,32 @@ body {
     height: 100vh;
 }
 
-#create_task_section {
+#task_section {
     margin: auto;
     padding-top: 20px;
 }
 
-#create_task_section>h1 {
+#task_section>h1 {
     text-align: center;
     margin-bottom: 20px;
 }
 
 .inputArea {
     display: block;
-    margin:10px;
+    margin:10px 0 20px 0;
 }
 
 .inputArea>label {
     display: block;
+    margin:0 0 5px 5px;
 }
 
 .inputArea>input, .inputArea>select {
     height: 40px;
     width: 400px;
-    border-radius: 6px;
-    border:1px solid #333;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.5);
+    border:1px solid #CCC;
     padding: 5px 10px;
 }
 
@@ -262,7 +264,9 @@ body {
     height:120px;
     width: 400px;
     border-radius: 6px;
-    border:1px solid #333;
+    background-color: rgba(255,255,255,0.5);
+    border:1px solid #CCC;
     padding: 5px 10px;
+    /* margin-top:15px; */
 }
 
