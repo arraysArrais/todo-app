@@ -56,9 +56,15 @@ class TaskController extends Controller
 
     public function edit_action(Request $r){
 
-        //resgatando os dados enviados pela request
-        $request_data = $r->only(['title', 'due_date', 'category_id', 'description']);
+        
 
+        
+        //resgatando os dados enviados pela request
+        $request_data = $r->only(['title', 'due_date', 'category_id', 'description', 'is_done']);
+
+        //tratando a checkbox da task
+        empty($request_data['is_done']) ? $request_data['is_done'] = 0 : $request_data['is_done'] = 1;
+        
         //buscando no banco a task em questão
         $task = Task::find($r->id);
 
@@ -67,6 +73,8 @@ class TaskController extends Controller
             // return redirect(route('home'));
             return 'Task não existe';
         }
+
+
 
         //atualizando registro de task no banco de acordo com os dados recebidos na request
         $task->update($request_data);

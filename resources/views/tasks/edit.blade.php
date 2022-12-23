@@ -36,6 +36,10 @@
                 placeholder="Digite uma descrição para sua tarefa" value="{{$task->description}}"/>
 
 
+
+            <x-form.checkbox label="Tarefa realizada?" name="is_done" checked="{{$task->is_done}}"/>
+
+
             {{-- <div class="inputArea">
                 <button type="submit" class="btn btn-primary">Criar tarefa</button>
             </div> --}}

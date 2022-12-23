@@ -270,3 +270,8 @@ body {
     /* margin-top:15px; */
 }
 
+li{
+    color:red;
+    list-style-type: none;
+}
+
