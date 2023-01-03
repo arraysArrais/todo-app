@@ -55,7 +55,7 @@ class AuthController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6|confirmed' //passamos o argumento confirmed para o input que envia a senha. 
-            //Basta criarmos outro input com o mesmo nome do input de senha e adicionar um _confirmed. ex: password_confirmed
+            //Basta criarmos outro input com o mesmo nome do input de senha e adicionar um _confirmation. ex: password_confirmation
         ]);                                         //dessa forma, fazemos uma validação da confirmação da senha, sem precisar escrever manualmente a validação
 
         //se não passar em qualquer uma das validações, a requisição não é enviada e voltamos para a tela do form

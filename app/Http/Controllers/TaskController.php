@@ -100,4 +100,19 @@ class TaskController extends Controller
         $task->delete();
         return redirect(route('home'));
     }
+
+    public function update(Request $r){
+        // dd($r);
+        
+        $task = Task::findOrFail($r->taskid);
+        $task->is_done = $r->status;
+        $task->save();
+
+        return [
+            'success' => true
+        ];
+
+        
+        // dd($task);
+    }
 }

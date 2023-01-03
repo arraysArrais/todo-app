@@ -33,6 +33,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/task/delete', [TaskController::class, 'delete'])->name('task.delete');
     Route::get('/task', [TaskController::class, 'index'])->name('task.view');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+    Route::post('/task/update', [TaskController::class, 'update'])->name('task.update');
 });
 
 
@@ -40,6 +41,7 @@ Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'login_action'])->name('login_action');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/register', [AuthController::class, 'register_action'])->name('register_action');
+
 
 
 // Route::get('/', function () {
