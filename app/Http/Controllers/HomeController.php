@@ -19,11 +19,12 @@ class HomeController extends Controller
         }
 
         // dd($filteredDate);
-        
-        
-        $tasks = Task::whereDate('due_date', $filteredDate)->get();
-        // dd($tasks);
+
         $authUser = Auth::user();
+
+        $tasks = Task::whereDate('due_date', $filteredDate)->where('user_id', '=', $authUser->id)->get();
+        // dd($tasks);
+        
 
         $carbonDate = Carbon::createFromDate($filteredDate);
         

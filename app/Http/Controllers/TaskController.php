@@ -17,17 +17,15 @@ class TaskController extends Controller
     {
         $categorias = Category::all();
 
-        // $data['categories'] = $categorias;
-        // return view('tasks.create', $data);
-
         return view('tasks.create', [
-            'categories' => $categorias
+            'categories' => $categorias,
+            'authUserId' => $r->authUserId,
         ]);
     }
 
     public function create_action(Request $r){
         $task = $r->only(['title', 'category_id', 'description', 'due_date']);
-        $task['user_id'] = 1;
+        $task['user_id'] = $r->authUserId;
         $dbTask = Task::create($task);
 
         return redirect(route('home'));

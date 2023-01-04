@@ -7,7 +7,7 @@
 
     <section id="task_section">
         <h1>Criar Tarefa</h1>
-        <form method="POST" action="{{route('task.create_action')}}">
+        <form method="POST" action="{{route('task.create_action', ['authUserId'=>$authUserId])}}">
             {{-- precisamos do token csrf para que a próxima página valide que o form foi de fato enviado pelo próprio app, e não um envio externo --}}
             {{-- para isso, basta inserirmos o @csrf conforme abaixo. Caso contrário teremos erro de página expirada --}}
             @csrf
